@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require("fs");
-
+const keys = require("./keys/keys.js");
 const saveData = () => {
     //TO DO, WRITE CODE THAT SAVES THE NEW DATA INTO THE custom_data.json
     const data_to_write = JSON.stringify(temporary_data);
@@ -59,4 +59,4 @@ client.on('message', msg => {
 
 });
 
-client.login('NTQ3NTAzOTgxODMyNjk5OTI1.D03ucg.71hnKvkN8lBprmlZPmc1Zlk8Ofg');
+client.login(keys.token);
